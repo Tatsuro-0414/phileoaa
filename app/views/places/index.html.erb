@@ -1,0 +1,18 @@
+<h1>
+  場所検索
+</h1>
+<%= search_form_for @p, url: places_search_path do |f| %>
+  <%= f.label :name_eq, '商品名' %>
+  <%= f.collection_select :name_eq, @places, :name, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
+
+<% @places.each do |place| %>
+  <br>
+  <li>
+    <%= place.name %>
+    <%= place.category_id %>
+  </li>
+<% end %>
