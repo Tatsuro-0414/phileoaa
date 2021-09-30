@@ -9,25 +9,9 @@ function initMap(){
     center: centerp,
     zoom: 12,
   });
-
-  marker = new google.maps.Marker({
-    position: centerp,
-    map: map
-  });
+  var shopimage = document.getElementById('shopimage');
+  var src = shopimage.getAttribute('src');
+  v
+  
 }
 
-function codeAddress(){
-  let inputAddress = document.getElementById('address').value;
-
-  geocoder.geocode( { 'address': inputAddress}, function(results, status) {
-    if (status == 'OK') {
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
-      });
-    } else {
-      alert('該当する結果がありませんでした：' + status);
-    }
-  });   
-}

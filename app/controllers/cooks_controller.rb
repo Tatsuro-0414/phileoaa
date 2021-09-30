@@ -1,5 +1,5 @@
 class CooksController < ApplicationController
-
+ 
   def index
     @cooks = Cook.all
   end
@@ -9,7 +9,7 @@ class CooksController < ApplicationController
   end
   
   def create
-    @cook = ook.new(cook_params)
+    @cook = Cook.new(cooks_params)
    if @cook.save
      redirect_to  root_path
    else
@@ -17,12 +17,13 @@ class CooksController < ApplicationController
    end
  end
 
+ 
+ 
 
  private
-  def cook_params
-    params.require(:cook).permit(:image, :title,:store,:cooksentence).merge(user_id: current_user.id)
+  def cooks_params
+    params.require(:cook).permit(:image,:title,:store,:cooksentence)
+
+
   end
-
-
-
 end

@@ -1,0 +1,5 @@
+.item-info {
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+} 

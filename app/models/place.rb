@@ -1,6 +1,6 @@
 class Place < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :category
+  # extend ActiveStorage::Associations::ActiveRecordExtensions
+ 
 
   def self.search(search)
     if search != ""

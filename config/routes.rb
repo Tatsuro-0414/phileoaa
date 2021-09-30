@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   
 
-    resources :purchases, only: [:index,:create]
+    resources :places, only: [:index,:new,:create]
     resources :maps 
     
   end
