@@ -1,5 +1,5 @@
 <%= form_with model:@cook,local: true do |f| %>
  <%= f.file_field :image, id:"cook-image" %>
-   <%= f.submit "出品する" ,class:"sell-btn" %>
+   <%= f.submit "登録する" ,class:"sell-btn" %>
      <%= image_tag(url_for(@cook.avatar)) %>
      

@@ -1,3 +1,17 @@
+<h1>
+ 
+</h1>
+
+
+
+<div class="contents row">
+  
+ 
+    <%# <%= render partial: "place", locals: { place: place } %> 
+</div>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="UTF-8">
@@ -10,23 +24,27 @@ body { height: 100% }
 </style>
 <body>
 <h1>
+<div class='phileo-info'>
   PHILEOグルメ  '絶対にハズさない   美味しいお店を検索できる'
+  <div class='phileo-info'>
 </h1>
 <div id="map"></div>
 
   <div class='item-info'>
     <% @cooks.each do |cook| %>
-      <h3 class='item-name'>
-        <%= cook.store %>
-      </h3>
-      <div class='item-price'>
-        <div>
-          <%= cook.cooksentence%>
-        </div>
-        <div class='star-btn'>
+      <div class='item'> 
+        <div class='item-img'>
             <%= image_tag cook.image, id:"shopimage", class:"star-icon" %> 
         </div>
+      <div class='item-price'>
+        <h3 class='item-name'>
+          <%= cook.title %>
+        </h3>
+        <div>
+          <%= cook.store%>
+        </div>
       </div>
+     </div>
     <% end %>
   </div>
 
@@ -53,10 +71,18 @@ body { height: 100% }
         map: map,
         position: {lat: 26.214803, lng: 127.676176},
       });
+      
+
     var marker = new google.maps.Marker({
         map: map,
         position: {lat: 26.2155658, lng: 127.6691134},
         });
+    var marker = new google.maps.Marker({
+        map: map,
+        position: {lat: 26.214098, lng: 127.677487},
+        });
+
+
         infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
         content: '<div class="mapSample">泡盛倉庫</div>' 
       });
@@ -70,4 +96,7 @@ body { height: 100% }
 
 
 
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes

@@ -2,9 +2,9 @@
 <html>
   <head>
    <meta charset="UTF-8">
-    '絶対にハズさない
+    PHILEO
     <p>
-      美味しいお店を検索できる'
+     ”絶対にハズさない美味しいお店を検索できる'
     </p>
   </head>
   <h1>
@@ -20,14 +20,15 @@
 
 
 
-<h1>
+
+<%# <h1>
   新規登録
 </h1>
 <%= search_form_for @p, url: new_cook_path do |f| %>
   
   
-  <div class="sell-btn-contents">
-      <%= f.submit "登 録" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
-    <% end %>
+  <%# <div class="sell-btn-contents"> %>
+      <%# <%= f.submit "登 録" ,class:"sell-btn" %> 
+      <%# <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <%# </div> %> 
+    <%# <% end %> 
