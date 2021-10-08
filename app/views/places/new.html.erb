@@ -3,3 +3,10 @@
    <%= f.submit "登録する" ,class:"sell-btn" %>
      <%= image_tag(url_for(@cook.avatar)) %>
      
+
+<%= form_with model:map,local: ture do |f|%>
+<%= f.file_field :maps, id:"maps-gogole" %>
+   <%= f.submit "登録する" ,class:"sel-btn" %>
+   
+
+ 

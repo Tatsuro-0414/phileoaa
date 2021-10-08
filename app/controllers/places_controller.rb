@@ -33,4 +33,5 @@ class PlacesController < ApplicationController
     @p = Place.ransack(params[:q])  
   end
 
+  
 end

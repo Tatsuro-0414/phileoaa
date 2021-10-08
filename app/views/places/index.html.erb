@@ -17,10 +17,22 @@
   <%= f.submit '検 索' %>
 <% end %>
 
+<%= form_with url: new_cook_path,local: true do |f|%>
+<%= f.file_field :maps, id:"maps-gogole" %>
+   <%= f.submit "登録する" ,class:"sel-btn" %>
 
+<% end %>
 
+ <%= form_with  local: true do |f| %>
+    
+      <%= f.text_field :name, placeholder: "XX COFFEE ROASTER", class: "form-control"%>
+      br
+      p 住所を入力
+    <%= f.text_field :address, placeholder: "東京都港区芝公園4-2−8", class: "form-control"%>
+      br
+      <%=  f.submit "登録する", class: "btn btn-primary"%>
 
-
+<% end %>
 <%# <h1>
   新規登録
 </h1>
