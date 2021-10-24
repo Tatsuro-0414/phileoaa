@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_09_12_121907) do
     t.string "title", null: false
     t.string "store", null: false
     t.string "cooksentence", null: false
+    t.string "lat", null: false
+    t.string "ing", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

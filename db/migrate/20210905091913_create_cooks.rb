@@ -5,6 +5,8 @@ class CreateCooks < ActiveRecord::Migration[6.0]
       t.string :title , null: false
       t.string :store , null: false
       t.string :cooksentence, null: false
+      t.string :lat, null: false
+      t.string :ing, null: false
 
       
   
