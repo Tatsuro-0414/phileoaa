@@ -31,7 +31,7 @@ body { height: 100% }
     <% @cooks.each do |cook| %>
       <div class='item'> 
         <div class='item-img'>
-            <%= image_tag cook.image, id:"shopimage", class:"star-icon" %> 
+            <%# <%= image_tag cook.image, id:"shopimage", class:"star-icon" %> 
         </div>
         
       <div class='item-price'>
@@ -47,9 +47,6 @@ body { height: 100% }
           <div>
       </div>
      </div>
-      <h4 class='item-place'>
-          <%= cook.place %>
-        </h4>
     <% end %>
   </div>
 
