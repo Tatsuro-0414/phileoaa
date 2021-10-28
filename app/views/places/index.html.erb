@@ -10,7 +10,7 @@
   <h1>
   
 </h1>
-<%= search_form_for @p, url: places_search_path do |f| %>
+<%= search_form_for @p, url: places_search_path do |f| %> 
   <%= f.label :name_eq, '沖縄県' %>
    <select>
           <option>指定なし</option>
@@ -23,10 +23,5 @@
 <% end %>
 
 
-<%# <%= form_with url: new_cook_path,local: true do |f|%> 
-<%# <%= f.file_field :maps, id:"maps-gogole" %>
-   <%# <%= f.submit "登録する" ,class:"sel-btn" %> 
-
-<%# <% end %> 
 
  
