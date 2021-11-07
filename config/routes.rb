@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   resources :cooks do
     collection do
       get 'search'
+      
+      
     end
   
 
     resources :places, only: [:index,:new,:create]
-    resources :maps 
+    resources :cook, only: [:index,:new,:create]
     
   end
 end
