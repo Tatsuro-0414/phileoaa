@@ -5,6 +5,7 @@ class CreateCooks < ActiveRecord::Migration[6.0]
       t.string :title , null: false
       t.string :store , null: false
       t.string :cooksentence, null: false
+      t.text :map_html
 
       
   

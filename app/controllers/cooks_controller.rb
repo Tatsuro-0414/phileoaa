@@ -1,4 +1,6 @@
 class CooksController < ApplicationController
+  before_action :search_product, only: [:index, :search]
+
  
   def index
     @cooks = Cook.all
@@ -17,6 +19,9 @@ class CooksController < ApplicationController
    end
  end
 
+  def search
+    @results = @p.result.includes(:category)
+  end
  
  
 
@@ -26,4 +31,10 @@ class CooksController < ApplicationController
 
 
   end
+
+ private
+
+ def search_cook
+  @p = cook.ransack(params[:q])
+ end
 end

@@ -1,9 +1,12 @@
 class PlacesController < ApplicationController
 
   before_action :search_place, only: [:index, :search]
+
+ 
   
   def index
     @places = Place.all 
+   
 
   end
 
@@ -20,7 +23,7 @@ class PlacesController < ApplicationController
    end
   end
     def search
-      @results = @p.result.includes(:place)
+      @results = @p.result.includes(:category)
       @places = Place.all 
       @cooks = Cook.all
 
