@@ -15,8 +15,8 @@
 
 
 .item-img {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -34,4 +34,9 @@
 
 .item-store {
   font-size: 70px;
+}
+
+.side-bar{
+  width: 500px;
+  float: right;
 }

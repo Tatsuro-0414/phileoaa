@@ -1,4 +1,4 @@
-class Category < ActiveHash::Base
+class Category < ActiveStorage
   self.data = [
     {id: 1, name: '---' },     
     {id: 2, name: '沖縄'},
@@ -8,7 +8,7 @@ class Category < ActiveHash::Base
     
   ]
   include ActiveHash::Associations
-  has_many :places
+  has_many :place
 
   
 end

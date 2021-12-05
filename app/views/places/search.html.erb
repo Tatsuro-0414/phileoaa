@@ -1,52 +1,43 @@
-<h1>
- 
-</h1>
-
-
-
-<div class="contents row">
-  
- 
-    <%# <%= render partial: "place", locals: { place: place } %> 
-</div>
-
-
-
-
+<div class="side-bar">
+ </div>
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyAc8ucfbF9aY5Jn9VehhJZ852fopENuQTc"></script>
 <style>
-html { height: 100% }
-body { height: 100% }
-#map { height: 50%; width: 50%}
+  html { height: 100% }
+  body { height: 50% }
+  #map { height: 50%; width: 50%}
 </style>
 <body>
-<h1>
-<div class='phileo-info'>
-  PHILEOグルメ  '絶対にハズさない   美味しいお店を検索できる'
   <div class='phileo-info'>
-</h1>
-<div id="map"></div>
+    <h1>
+        PHILEOグルメ  '絶対にハズさない   美味しいお店を検索できる'
+    </h1>
+  </div>
+  
+  <div id="map"></div>
+  
 
   <div class='item-info'>
     <% @cooks.each do |cook| %>
+     <div class="side-bar">
+    </div>
       <div class='item'> 
         <div class='item-img'>
             <%= image_tag cook.image, id:"shopimage", class:"star-icon" %> 
         </div>
-        
-      <div class='item-price'>
-      <div class='item-store'>
-          <%= cook.store%>
-        </div>
+        <div class='item-price'>
+          <div class='item-store'>
+            <%= cook.store%>
+          </div>
+          <h3 class='item-name'>
+            <%= cook.title %>
+          </h3>
 
-        <h3 class='item-name'>
-          <%= cook.title %>
-        </h3>
+          
+
+
         </div>
-        
-          <div>
+       <div>
       </div>
-     </div>
     <% end %>
   </div>
 
@@ -92,9 +83,20 @@ body { height: 100% }
       infoWindow.open(map, marker); // 吹き出しの表示    
       });
   </script>
+</body>
+  
+<h1>
+検索結果
+</h1>
 
-  </body>
-  </html> 
+<% @places.each do |place| %>
+    <br>
+    <li>
+      <%= place.name %>
+     
+    </li>
+  <% end %>
 
+  該当する商品はありません
 
-
+<%= link_to 'トップページへ戻る', root_path %>
